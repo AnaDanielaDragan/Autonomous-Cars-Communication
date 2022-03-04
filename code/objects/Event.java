@@ -1,7 +1,5 @@
 package code.objects;
 
-import code.objects.Location;
-
 /**
  * Class that holds the information about an event encountered by a car.
  */
