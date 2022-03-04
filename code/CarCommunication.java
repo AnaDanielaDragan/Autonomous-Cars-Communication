@@ -2,6 +2,8 @@ package code;
 
 import code.objects.Car;
 
+import java.util.Map;
+
 /**
  * Interface that defines the methods used by the Handler class in order to communicate with another car.
  * Implementations can be done according to the network specifications and technologies used.
@@ -22,4 +24,11 @@ public interface CarCommunication {
      * @return Data from the sending car, in a Car object form
      */
     Car receiveCarInfo();
+
+    /**
+     * Defines the process of retrieving all the cars available and connected to the network.
+     *
+     * @return A HashMap of cars found
+     */
+     Map<String, Car> getConnectedCars();
 }

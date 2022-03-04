@@ -2,7 +2,6 @@ package code;
 
 import code.objects.Car;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -29,20 +28,10 @@ public class CommunicationHandler {
      */
     public CommunicationHandler(Car myCar) {
         this.myCar = myCar;
-        this.connectedCars = getConnectedCars();
-    }
-
-    /**
-     * Provides all the cars available and connected to the network.
-     *
-     * @return A HashMap of cars found
-     */
-    private Map<String, Car> getConnectedCars() {
-        Map<String, Car> connectedCars = new HashMap<>();
-
-        //TODO: get connected car list from external database
-
-        return connectedCars;
+        /*
+            Initialize carCommunication with an object implementing the interface.
+         */
+        this.connectedCars = carCommunication.getConnectedCars();
     }
 
     /**
